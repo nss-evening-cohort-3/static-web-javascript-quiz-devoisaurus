@@ -19,10 +19,17 @@ var drawTree = function(params) {
 	console.log("height", params.height);
 	console.log("character", params.character);
 
-	for (var i = 0; i <= params.height; i++) {
-		var treeVase = params.character.repeat(i);
+var treeVase;
+var space = " ";
+var tallTree = params.height - 1;
+var treeLeaves = 1;
 
-		console.log(treeVase);
+
+	for (var i = 0; i < params.height; i++) {
+		console.log(space.repeat(tallTree) + params.character.repeat(treeLeaves));
+		-- tallTree;
+		treeLeaves = treeLeaves + 2;
+
   }
 }
 
@@ -43,3 +50,14 @@ button.addEventListener("click", onClickHandler);
 
 
 })(document);
+
+
+
+// sort of worked
+
+
+// for (var i = 0; i <= params.height; i++) {
+// 		var treeVase = params.character.repeat(i);
+
+// 		console.log(treeVase);
+//   }
