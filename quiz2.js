@@ -40,3 +40,15 @@ function buildTree(treeObject) {
 
 // click event for button
 submitButton.addEventListener("click", validate);
+
+// enter key event
+addEventListener("keypress", enterKey);
+function enterKey(e){
+    var keyCode = e.keyCode;
+    if(keyCode == 13){
+        validate();
+    }
+};
+
+
+
